@@ -1,2 +1,2 @@
 FROM mysql
-ADD azurevote.sql /docker-entrypoint-initdb.d
+ADD ./azure-vote-mysql/azurevote.sql /docker-entrypoint-initdb.d
