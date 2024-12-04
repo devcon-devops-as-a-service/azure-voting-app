@@ -4,4 +4,4 @@ RUN     apt-get update && \
         apt-get install libmariadb-dev -y && \
         pip install flask-mysql
  
-ADD     /azure-vote /app
+ADD     azure-vote/azure-vote /app
