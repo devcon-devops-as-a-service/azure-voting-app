@@ -8,6 +8,9 @@ metadata:
     component: {{ $serviceName }}-{{ .Values.azureVoteFront.deployment.name }}
 spec:
   replicas: {{ .Values.azureVoteFront.deployment.replicas }}
+  selector:
+    matchLabels:
+      component: {{ $serviceName }}-{{ .Values.azureVoteFront.deployment.name }}
   strategy:
     rollingUpdate:
       maxSurge: 1
