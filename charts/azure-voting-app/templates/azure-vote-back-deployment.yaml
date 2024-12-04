@@ -8,6 +8,9 @@ metadata:
     component: {{ $serviceName }}-{{ .Values.azureVoteBack.deployment.name }}
 spec:
   replicas: {{ .Values.azureVoteBack.deployment.replicas }}
+  selector:
+  matchLabels:
+    component: {{ $serviceName }}-{{ .Values.azureVoteFront.deployment.name }}
   template:
     metadata:
       labels:
